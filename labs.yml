@@ -1,0 +1,6 @@
+username: "professor"
+machines: 
+  - name: "Labin 1"
+    ip: "198.168.1.10"
+  - name: "Labin 2"
+    ip: "198.168.1.11"
