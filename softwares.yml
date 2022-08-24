@@ -1,8 +1,14 @@
-"preinstall": "apt update",
-"softwares":
-  - name: "OpenJDK 18",
-    apt: "openjdk-18-jdk"
-  - name: "VS Code",
+# Commands to be executed before the installation of the first software from a list of selected ones
+preinstall: "apt update",
+
+# Softwares available to be installed in the machine containing the LTSP solution,
+# which the installation/removal will be replicated to the other workstations
+softwares:
+  - description: "VS Code"
+    # Optional command to be executed before installing the software
     preinstall: wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add - && 
                 sudo add-apt-repository 'deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main'
+    # Name of the software to be installed via apt install 
     apt: "code"
+  - description: "OpenJDK 18"
+    apt: "openjdk-18-jdk"
