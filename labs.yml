@@ -1,6 +1,10 @@
+# Default username for each of the machines listed below
 username: "professor"
+
+# List of machines where the LTSP solution is installed,
+# so that we can install/remove softwares to be replicated the other workstations on the lab.
 machines: 
-  - name: "Labin 1"
+  - labname: "Labin 1"
     ip: "198.168.1.10"
-  - name: "Labin 2"
+  - labname: "Labin 2"
     ip: "198.168.1.11"
