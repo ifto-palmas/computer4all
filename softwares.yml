@@ -1,0 +1,8 @@
+"preinstall": "apt update",
+"softwares":
+  - name: "OpenJDK 18",
+    apt: "openjdk-18-jdk"
+  - name: "VS Code",
+    preinstall: wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add - && 
+                sudo add-apt-repository 'deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main'
+    apt: "code"
