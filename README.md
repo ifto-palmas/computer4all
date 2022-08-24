@@ -13,3 +13,8 @@ sudo apt install nodejs
 
 - Duplicate .env.dist as .env
 - Run `npm start`
+
+## Structure
+
+- [labs.yml](labs.yml): configuration of the computer laboratories to be remotely managed. 
+- [softwares.yml](softwares.yml): configuration of the softwares available for install on the remote workstations.
