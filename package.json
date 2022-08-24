@@ -24,7 +24,7 @@
   "bugs": {
     "url": "https://github.com/ifto-palmas/computer4all/issues"
   },
-  "homepage": "https://github.com/ifto-palmas/computer4all#readme",
+  "homepage": "https://github.com/ifto-palmas/computer4all",
   "dependencies": {
     "express": "^4.18.1"
   },
