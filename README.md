@@ -1,6 +1,6 @@
 # computer4all
 
-Remote administration of Linux workstations using LTSP.
+Remote administration of Linux workstations using [LTSP](https://ltsp.org).
 
 ## Requirements
 
