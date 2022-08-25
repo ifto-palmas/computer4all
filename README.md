@@ -1,4 +1,4 @@
-# computer4all
+# computer4everyone
 
 Remote administration of Linux workstations using [LTSP](https://ltsp.org).
 
