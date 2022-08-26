@@ -16,5 +16,5 @@ sudo apt install nodejs
 
 ## Structure
 
-- [labs.yml](labs.yml): configuration of the computer laboratories to be remotely managed. 
-- [softwares.yml](softwares.yml): configuration of the softwares available for install on the remote workstations.
+- [labs.yml](config/labs.yml): configuration of the computer laboratories to be remotely managed. 
+- [softwares.yml](config/softwares.yml): configuration of the softwares available for install on the remote workstations.
