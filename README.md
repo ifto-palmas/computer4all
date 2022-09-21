@@ -6,6 +6,7 @@ Remote administration of Linux workstations using [LTSP](https://ltsp.org).
 
 ```bash
 # Node.js 16+
+sudo apt update
 sudo apt install nodejs
 ```
 
