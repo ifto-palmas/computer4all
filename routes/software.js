@@ -9,7 +9,7 @@ const controller = require('../controllers/software')
  *    parameters:
  *      - name: aptName
  *        in: path
- *        description: Name do software no apt
+ *        description: Nome do software no apt
  *        required: true
  *        type: string
  *    responses:
