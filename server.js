@@ -15,5 +15,5 @@ const host = process.env.SERVER || "localhost"
 const address = externalPort == 80 ? host : `${host}:${externalPort}`;
 
 app.listen(internalPort, () => {
-    console.log('Servidor iniciado. Abra o navegador em http://' + address);
+    console.log(`\n\nServidor iniciado. Abra o navegador em http://${address}\n`);
 });
