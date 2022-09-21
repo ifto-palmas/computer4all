@@ -7,7 +7,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cors());
 
+const routes = require('./routes');
+
 app.get('/', (_, res) => res.sendFile('/index.html'))
+app.use('/api', routes);
 
 const DEFAULT_PORT = 8080
 
