@@ -1,4 +1,4 @@
-# computer4everyone
+# computer4everyone [![nodejs-ci](https://github.com/iftopalmas/computer4everyone/actions/workflows/nodejs.yml/badge.svg)](https://github.com/iftopalmas/computer4everyone/actions/workflows/nodejs.yml)
 
 Remote administration of Linux workstations using [LTSP](https://ltsp.org).
 
