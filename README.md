@@ -9,10 +9,11 @@ Remote administration of Linux workstations using [LTSP](https://ltsp.org).
 sudo apt install nodejs
 ```
 
-## Running
+## Running on dev mode
 
-- Duplicate .env.dist as .env
-- Run `npm start`
+```bash
+npm run dev
+```
 
 ## Structure
 
