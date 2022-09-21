@@ -3,18 +3,26 @@ const yml = require('../lib/yml')
 
 const load = async () => await yml.parse('config/softwares.yml')
 
+const isThereAnySoftware = (response, softwares) => {
+    if(softwares.length === 0) {
+        response.status(404).send({ message: 'Nenhum software cadastrado!' })
+        return false
+    }
+
+    return true
+}
+
 exports.get = async (req, res) => {
     try {
         const softwares = await load()
 
-        if(softwares.length === 0) {
-            return res.status(404).send({message: 'Nenhum software cadastrado!'})
-        }
+        if(!isThereAnySoftware(res, softwares))
+            return
 
-        const software = softwares.find(s => s.aptName.toLowerCase() === req.params.aptName.toLowerCase())
+        const sw = softwares.find(s => s.aptName.toLowerCase() === req.params.aptName.toLowerCase())
 
-        if(software)
-            res.status(200).send(software) 
+        if(sw)
+            res.status(200).send(sw)
         else httperror.custom(res, `Software não localizado com nome: ${req.params.aptName}`, 404)
     } catch (error) {
         httperror.server(res, error)
@@ -24,10 +32,8 @@ exports.get = async (req, res) => {
 exports.all = async (req, res) => {
     try {
         const softwares = await load()
-
-        if(softwares.length === 0)
-            httperror.custom(res, `Software não localizado com nome: ${req.params.aptName}`, 404)
-        else res.status(200).send(softwares) 
+        if(isThereAnySoftware(res, softwares))
+            res.status(200).send(softwares)
     } catch (error) {
         httperror.server(res, error)
     }
