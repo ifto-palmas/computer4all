@@ -16,8 +16,8 @@ RUN npm i pm2
 COPY . .
 
 # Runtime Stage
-FROM alpine:latest
-RUN apk add --update nodejs
+FROM ubuntu:latest
+RUN apt install nodejs
 RUN addgroup -S node && adduser -S node -G node
 USER node
 RUN mkdir /home/node/backend
