@@ -4,8 +4,8 @@
 - aptName: "code" # Name of the software to be installed via apt install 
   description: "VS Code"
   # Optional command to be executed before installing the software
-  preinstall: wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add - && 
-              sudo add-apt-repository 'deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main'
+  preinstall: wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | apt-key add - && 
+              add-apt-repository 'deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main'
 - aptName: "openjdk-18-jdk"
   description: "OpenJDK 18"
 
