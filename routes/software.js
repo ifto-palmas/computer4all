@@ -18,6 +18,24 @@ const controller = require('../controllers/software')
  */
 router.get('/:aptName', controller.get)
 
+
+/**
+ * @swagger
+ * /api/software/install/{aptName}:
+ *  post:
+ *    summary: Solicita instalação de um software
+ *    parameters:
+ *      - name: aptName
+ *        in: path
+ *        description: Name do software para instalar via apt
+ *        required: true
+ *        type: string
+ *    responses:
+ *      '201':
+ *        description: Software instalado com sucesso
+ */
+router.post('/install/:aptName', controller.install)
+
 /**
  * @swagger
  * /api/software:
@@ -27,6 +45,6 @@ router.get('/:aptName', controller.get)
  *      '200': 
  *        description: Lista de softwares obtida com sucesso
  */
- router.all('/', controller.all)
+ router.get('/', controller.all)
 
 module.exports = router
