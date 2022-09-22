@@ -24,8 +24,8 @@ exports.get = async (req, res) => {
         if(sw)
             res.status(200).send(sw)
         else httperror.custom(res, `Software não localizado com nome: ${req.params.aptName}`, 404)
-    } catch (error) {
-        httperror.server(res, error)
+    } catch (e) {
+        httperror.server(res, e)
     }
 }
 
@@ -34,7 +34,7 @@ exports.all = async (req, res) => {
         const softwares = await load()
         if(isThereAnySoftware(res, softwares))
             res.status(200).send(softwares)
-    } catch (error) {
-        httperror.server(res, error)
+    } catch (e) {
+        httperror.server(res, e)
     }
 }
