@@ -21,20 +21,25 @@ router.get('/:aptName', controller.get)
 
 /**
  * @swagger
- * /api/software/install/{aptName}:
+ * /api/software/install/{aptName}/{labname}:
  *  post:
  *    summary: Solicita instalação de um software
  *    parameters:
  *      - name: aptName
  *        in: path
- *        description: Name do software para instalar via apt
+ *        description: Nome do software para instalar via apt
+ *        required: true
+ *        type: string
+ *      - name: labname
+ *        in: path
+ *        description: Nome do labin onde o software será instalado
  *        required: true
  *        type: string
  *    responses:
  *      '201':
  *        description: Software instalado com sucesso
  */
-router.post('/install/:aptName', controller.install)
+router.post('/install/:aptName/:labname', controller.install)
 
 /**
  * @swagger
