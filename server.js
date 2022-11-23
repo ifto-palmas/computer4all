@@ -19,6 +19,8 @@ const PORT = process.env.PORT || DEFAULT_PORT
 const HOST = process.env.SERVER || 'localhost'
 const ADDRESS = PORT == 80 ? HOST : `${HOST}:${PORT}`
 
+require('./swagger-setup')(app)
+
 app.listen(PORT, () => {
     console.log(`\n\nServidor iniciado. Abra o navegador em http://${ADDRESS}\n`)
 })

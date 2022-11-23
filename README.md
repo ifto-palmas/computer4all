@@ -16,6 +16,10 @@ sudo apt install nodejs
 npm run dev
 ```
 
+## Accessing the web application
+
+Open a browser at http://localhost:8080
+
 ## Structure
 
 - [labs.yml](config/labs.yml): configuration of the computer laboratories to be remotely managed. 
