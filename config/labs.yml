@@ -4,7 +4,7 @@ username: "professor"
 # List of machines where the LTSP solution is installed,
 # so that we can install/remove softwares to be replicated the other workstations on the lab.
 machines: 
-  - labname: "Labin 1"
-    ip: "198.168.1.10"
+  - labname: "LabMatica"
+    ip: "10.100.64.34"
   - labname: "Labin 2"
-    ip: "198.168.1.11"
+    ip: "999.999.999.999"
