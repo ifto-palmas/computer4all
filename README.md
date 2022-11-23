@@ -20,7 +20,7 @@ npm run dev
 
 Open a browser at http://localhost:8080
 
-## Structure
+## Project Structure
 
 - [labs.yml](config/labs.yml): configuration of the computer laboratories to be remotely managed. 
 - [softwares.yml](config/softwares.yml): configuration of the softwares available for install on the remote workstations.
