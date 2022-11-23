@@ -1,10 +1,10 @@
-# Default username for each of the machines listed below
-username: "professor"
-
 # List of machines where the LTSP solution is installed,
 # so that we can install/remove softwares to be replicated the other workstations on the lab.
-machines: 
-  - labname: "LabMatica"
+# The name of each entry into this list is the labname and the values represent
+# information about the server in this lab.
+labmatica: 
     ip: "10.100.64.34"
-  - labname: "Labin 2"
+    username: "professor"
+lab2:
     ip: "999.999.999.999"
+    username: "professor"
